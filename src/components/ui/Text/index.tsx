@@ -5,14 +5,12 @@ import { ThemeType } from 'types/modules'
 export interface TextProps extends Omit<JSX.IntrinsicElements['span'], 'ref'> {
   className?: string
   style?: CSSProperties
-  type?: 'Heading2' | 'languages' | 'Semibold1' | 'Semibold2' | 'Regular1' | 'Regular2'
+  type?: 'question' | 'languages' | 'title' | 'scroll'
   /**
-   * 'Heading2' -  normal bold 36px/44px
+   * 'question' -  normal 400 10px/14px
    * 'languages' - normal bold 24px/29px
-   * 'Semibold1' - normal 600 18px/22px
-   * 'Semibold2' - normal 600 14px/17px
-   * 'Regular1' - normal normal 18px/22px
-   * 'Regular2' - normal normal 14px/17px
+   * 'title' - normal 600 18px/22px
+   * 'title' - normal 600 18px/22px
    */
   block?: boolean
   color?: keyof ThemeType['colors']['palette'] | string
@@ -28,7 +26,7 @@ function Text({
   className,
   style,
   children,
-  type = 'Regular1',
+  type = 'question',
   block,
   color,
   lineHeight,

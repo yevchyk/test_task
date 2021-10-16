@@ -3,6 +3,7 @@ import Layout from "components/Layout";
 import theme from "lib/theme";
 import {ThemeProvider} from "styled-components";
 import {BrowserRouter, Route, Switch, useLocation} from "react-router-dom";
+import Main from "pages/Main";
 
 
 function App() {
@@ -13,10 +14,10 @@ function App() {
         <Layout>
           <Switch>
             <Route path='/main'>
-              
+              <Main/>
             </Route>
             <Route path='/second'>
-              
+              <div style={{margin: '100px'}}>Some tetx</div>
             </Route>
           </Switch>
         </Layout>
@@ -49,7 +50,7 @@ function PageTitle() {
       }
     }
     setTitle('Test Task')
-  }, [location.pathname])
+  }, [location.pathname, titles])
   return null
 }
 
