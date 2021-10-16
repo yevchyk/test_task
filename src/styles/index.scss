@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import 'reset.scss';
+
+body {
+  font-family: 'Grtsk Giga', 'Helvetica Neue', sans-serif;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  background: #BEBEBE;
+  // TODO: remove this
+  //background: black;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#root {
+  flex-grow: 1;
+}
+
+.text {
+  &-left {
+    text-align: left !important;
+  }
+
+  &-center {
+    text-align: center !important;
+  }
+
+  &-right {
+    text-align: right !important;
+  }
+  &-nowrap {
+    white-space: nowrap;
+  }
+
+  &-uppercase {
+    text-transform: uppercase !important;
+  }
+
+  &-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.weight {
+  &-normal,
+  &-400 {
+    font-weight: normal !important;
+  }
+
+  &-500 {
+    font-weight: 500 !important;
+  }
+
+  &-600 {
+    font-weight: 600 !important;
+  }
+
+  &-bold,
+  &-700 {
+    font-weight: bold !important;
+  }
+
+  &-800 {
+    font-weight: 800 !important;
+  }
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.relative {
+  position: relative;
+}
