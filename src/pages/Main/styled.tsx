@@ -66,7 +66,7 @@ export const MainSC = styled.div<MainSCProps>`
     transform-origin: bottom left;
     position:absolute;
     bottom: 0;
-    right: 0;
+    right: 50px;
     animation: rotating 6s linear infinite;
   }
   .circle {
@@ -76,6 +76,7 @@ export const MainSC = styled.div<MainSCProps>`
     height: 100px;
     position: absolute;
     transform-origin: bottom center;
+    border-bottom: 1px solid;
     ${TextSC} {
       height: 20px;
       width: 20px;
@@ -83,5 +84,22 @@ export const MainSC = styled.div<MainSCProps>`
       text-align: center;
     } 
   }
+  @media screen and (max-width: 1024px) {
 
+  }
+  @media screen and (max-width: 415px) {
+    .questions {
+      display: none;
+    }
+    .letter {
+      height: 80px;
+      ${TextSC} {
+        height: 16px;
+        width: 16px;
+      }
+    }
+    .rotate {
+      height: 80px;
+    }
+  }
 `
